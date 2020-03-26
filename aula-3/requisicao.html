@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<p id="turma"></p>
+<p id="aula"></p>
+<p id="cidade"></p>
+<p id="status"></p>
+
+<body>
+
+  <script>
+    // cria um objeto HTTP
+    const Http = new XMLHttpRequest();
+    // url dos dados
+    const url = './dados.json';
+    // abre a requisição, do tipo get
+    Http.open("GET", url);
+    // envia a requisição
+    Http.send();
+
+    // ao finalizar requisição
+    Http.onreadystatechange = (e) => {
+      let resposta = JSON.parse(Http.responseText)
+      console.log(resposta)
+
+      const turma = document.getElementById("turma")
+      const aula = document.querySelector("#aula");
+      const cidade = document.querySelector("#cidade")
+      const status = document.querySelector("#status")
+      turma.innerText = resposta.turma
+      aula.innerText = resposta.aula;
+      cidade.innerText = resposta.cidade;
+      status.innerText = resposta.finalizado;
+      //tem que ser finalizado para puxar do arquivo json
+      //é preciso ser exatamente como está o nome do arquivo json
+    }
+
+  </script>
+
+</body>
+
+</html>

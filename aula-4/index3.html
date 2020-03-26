@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API do DOG</title>
+    <style>
+        body {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        p {
+            border: 1px solid cyan;
+            color: gray;
+            padding: 20px;
+            max-width: 960px;
+            cursor: pointer;
+            text-align: center;
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+        p:hover {
+            background: cyan;
+            color: white;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="qtd"></h1>
+    <p onmouseover="mudarImagem()">Escorregue aqui</p>
+    <img src="" alt="" id="foto">
+
+    <script>
+        const quantidade = document.querySelector("#qtd");
+        const foto = document.querySelector("#foto");
+
+        const requisicao = { method: 'get' }
+
+        let fotos = []; //setando array
+
+        function mudarImagem() {
+            fetch("https://random.dog/woof.json", requisicao) //nao tem ponto e virgula
+            .then(function(resposta) { //cria um método que acessa o json
+               // console.log(resposta);
+                resposta.json() //nao tem ponto e virgula
+                //resposta.json acessa a url random.dog
+                .then(function(dados) { //cria um método que receberá a imagem
+                    //console.log(dados)
+                    foto.src = dados.url;
+                    //foto.src vai receber o source da imagem puxada pelo dados.url
+                    fotos.push(dados.url);
+                    qtd.innetText = fotos.length;
+                })
+            })
+            .catch(function(erro) {
+                console.log(erro);
+            })
+        }
+
+    </script>
+    
+</body>
+</html>

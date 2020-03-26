@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumir API</title>
+</head>
+<body>
+    <h1 id="qtd"></h1>
+    <button onmouseover="mudarImagem()">Foto do Dog</button> <br>
+  <img src="" id="foto">
+
+  <script>
+
+    // atribuo na variavel a tag img
+    const imagem = document.getElementById("foto");
+
+    // objeto com meus dados de requisição
+    const dadosDaRequisicao = {
+      method: 'get'
+    }
+
+    let fotos = [];
+    function mudarImagem() {
+        const titulo = document.getElementById("qtd");
+      //inicio o fetch na url
+      fetch("https://random.dog/woof.json", dadosDaRequisicao)
+        .then(function (resposta) {
+          // converto o retorno em json
+          resposta.json()
+            // pego os dados e mostro no console
+            .then(function (dados) {
+              // coloco no source da imagem o conteúdo recebido pela API
+              imagem.src = dados.url
+              // mostro no console o resultado da API
+              console.log(dados)
+              fotos.push(dados.url);
+              console.log(fotos);
+              titulo.innerText = fotos.length;
+            })
+        })
+        //se falhar mostra o erro
+        .catch(function (erro) {
+          console.log(erro)
+        })
+
+
+    }
+
+  </script>
+    
+</body>
+</html>

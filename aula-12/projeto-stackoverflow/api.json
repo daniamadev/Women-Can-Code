@@ -1,0 +1,29 @@
+{
+  "usuario": {
+    "nome": "Jeniffer"
+  },
+  "pergunta": {
+    "titulo": "O que é uma api rest afinal de contas???", //ok
+    "conteudo": "O que significa REST e RESTFul?? Num entendi", //ok
+    "tags": "javascript", //ok
+    "votos": 4, //ok
+    "data": "09 de março de 2020", //ok
+    "usuario": "frontdosbons" //ok
+  },
+  "respostas": [
+    {
+      "id": 1,
+      "conteudo": "Pergunta pra jeniffer", //ok
+      "votos": 2,
+      "data": "09 de março de 2020", //ok
+      "usuario": "alunodosbons" //ok
+    },
+    {
+      "id": 2,
+      "conteudo": "Pergunta pro google",
+      "votos": 0,
+      "data": "09 de março de 2020",
+      "usuario": "zé"
+    }
+  ]
+}

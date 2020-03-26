@@ -1,0 +1,56 @@
+{
+  "lista": [
+    {
+      "name": "Arroz",
+      "id": 2
+    },
+    {
+      "name": "Sal",
+      "id": 3
+    },
+    {
+      "name": "Carne",
+      "id": 4
+    },
+    {
+      "name": "Ovo",
+      "id": 5
+    },
+    {
+      "name": "Sabonete",
+      "id": 7
+    },
+    {
+      "name": "Sabonete1",
+      "id": 8
+    },
+    {
+      "name": "Café",
+      "id": 9
+    },
+    {
+      "name": "Panela",
+      "id": 10
+    },
+    {
+      "name": "Panela",
+      "id": 11
+    },
+    {
+      "name": "Panela",
+      "id": 12
+    },
+    {
+      "name": "Panela",
+      "id": 13
+    },
+    {
+      "name": "Cebola",
+      "id": 14
+    },
+    {
+      "name": "Cebola",
+      "id": 15
+    }
+  ]
+}

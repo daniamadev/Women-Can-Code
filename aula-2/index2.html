@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando objetos</title>
+</head>
+<body>
+
+    <p>Um lindo parágrafo</p>
+    <button onclick="verificarPessoa()">Verificar pessoa</button>
+
+    <script>
+        function verificarPessoa() {
+            let pessoa = {
+                nome: "Daniela",
+                idade: 29,
+                status_civil: false
+            }
+
+            if (pessoa.status_civil) {
+                alert("casada");
+            } else {
+                alert("solteira");
+            }
+        }
+    </script>
+    
+
+</body>
+</html>
