@@ -1,0 +1,9 @@
+div {
+  background: black;
+  text-align: center;
+}
+
+h1, h2 {
+  color:rgb(37, 48, 143); /*azul cor de relógio digital*/
+  font-weight: bold;
+}
