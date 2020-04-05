@@ -1,0 +1,3 @@
+Reducer vai ter o Switch Case
+Quando for consumir não precisa por essa info no redux
+Redux não é um componente, portanto não fica na pasta components
